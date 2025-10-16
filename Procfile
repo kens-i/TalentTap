@@ -1,0 +1,1 @@
+web: gunicorn talent_tap.wsgi
