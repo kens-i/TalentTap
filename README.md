@@ -45,7 +45,27 @@ TalentTap is a lightweight job board built to connect employers with candidates 
 ## Testing
 
 ## Credits
-
 ### Attribution / Credit Requirements
 
+### Other credits
+
+- Project author: TalentTap
+
+- User stories and feature planning: sourced from the project's planning spreadsheet and stakeholder input
+
+- Open-source libraries and frameworks: see the Technologies Used section for specific package acknowledgements
+
+- ERD and diagrams: Lucidchart
+
 ## Notes
+
+### AI-assisted development
+
+Parts of the README content and some developer-facing notes (such as templates, section structure, and suggested deployment steps) were drafted with the assistance of AI tools. AI was used to:
+
+- Generate concise documentation text (README sections and a project introduction)
+- Summarise user-story driven features and prioritise checklist items
+- Suggest deployment, testing, and accessibility reminders
+
+All AI-generated outputs were reviewed, edited, and accepted by the project developer. The developer verified the correctness, adjusted technical details to match the implementation, and ensured no sensitive data or secrets were introduced.
+
