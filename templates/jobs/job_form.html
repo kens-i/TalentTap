@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ view.action|default:"Job Form" }}{% endblock %}
+{% block content %}
+<h1>{% if object %}Edit Job{% else %}Post a Job{% endif %}</h1>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Save</button>
+</form>
+
+<p><a href="{% url 'employer_dashboard' %}">Back to dashboard</a></p>
+{% endblock %}

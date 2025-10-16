@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}My Jobs{% endblock %}
+{% block content %}
+<h1>My Jobs</h1>
+<p><a href="{% url 'job_create' %}">Post a New Job</a></p>
+
+{% if jobs %}
+  <table border="1">
+    <tr>
+      <th>Title</th>
+      <th>Status</th>
+      <th>Created</th>
+      <th>Actions</th>
+    </tr>
+    {% for job in jobs %}
+      <tr>
+        <td>{{ job.title }}</td>
+        <td>{{ job.status }}</td>
+        <td>{{ job.created_at|date:"Y-m-d" }}</td>
+        <td>
+          <a href="{% url 'job_detail' job.pk %}">View</a> |
+          <a href="{% url 'job_edit' job.pk %}">Edit</a> |
+          <a href="{% url 'job_delete' job.pk %}">Delete</a>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% else %}
+  <p>You haven’t posted any jobs yet.</p>
+{% endif %}
+{% endblock %}
