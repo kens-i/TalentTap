@@ -1,18 +1,23 @@
 {% extends "base.html" %}
-{% block title %}{{ object.title }}{% endblock %}
+{% block title %}{{ job.title }}{% endblock %}
 {% block content %}
-<h1>{{ object.title }}</h1>
-<p><strong>Company:</strong> {{ object.company }}</p>
-<p><strong>Location:</strong> {{ object.location }}</p>
+<h1>{{ job.title }}</h1>
+<p><strong>Company:</strong> {{ job.company }}</p>
+<p><strong>Location:</strong> {{ job.location }}</p>
 <p><strong>Description:</strong></p>
-<p>{{ object.description }}</p>
+<p>{{ job.description }}</p>
+
+{% if user.is_authenticated and job.owner_id == user.id %}
+  <p>
+    <a href="{% url 'edit_job' job.id %}">Edit</a> |
+    <a href="{% url 'delete_job' job.id %}">Delete</a>
+  </p>
+{% endif %}
 
 <h2>Apply for this job</h2>
-<form method="post" action="{% url 'job_apply' object.pk %}">
+<form method="post" action="">
   {% csrf_token %}
-  <p><label>Your name:</label><br><input type="text" name="name" required></p>
-  <p><label>Your email:</label><br><input type="email" name="email" required></p>
-  <p><label>Message:</label><br><textarea name="message" required></textarea></p>
+  {{ apply_form.as_p }}
   <button type="submit">Send Application</button>
 </form>
 {% endblock %}
