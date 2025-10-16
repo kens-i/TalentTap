@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ object.title }}{% endblock %}
+{% block content %}
+<h1>{{ object.title }}</h1>
+<p><strong>Company:</strong> {{ object.company }}</p>
+<p><strong>Location:</strong> {{ object.location }}</p>
+<p><strong>Description:</strong></p>
+<p>{{ object.description }}</p>
+
+<h2>Apply for this job</h2>
+<form method="post" action="{% url 'job_apply' object.pk %}">
+  {% csrf_token %}
+  <p><label>Your name:</label><br><input type="text" name="name" required></p>
+  <p><label>Your email:</label><br><input type="email" name="email" required></p>
+  <p><label>Message:</label><br><textarea name="message" required></textarea></p>
+  <button type="submit">Send Application</button>
+</form>
+{% endblock %}
