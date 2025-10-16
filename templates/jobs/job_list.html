@@ -12,15 +12,19 @@
 </form>
 
 {% if jobs %}
-  <ul>
-    {% for job in jobs %}
-      <li>
-        <a href="{% url 'job_detail' job.pk %}">{{ job.title }}</a>
-        — {{ job.company }} ({{ job.location }})
-      </li>
-    {% endfor %}
-  </ul>
+<ul>
+  {% for job in jobs %}
+    <li>
+      <a href="{% url 'job_detail' job.id %}">{{ job.title }}</a>
+      — {{ job.company }} ({{ job.location }})
+      {% if user.is_authenticated and job.owner_id == user.id %}
+        — <a href="{% url 'edit_job' job.id %}">Edit</a>
+        — <a href="{% url 'delete_job' job.id %}">Delete</a>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
 {% else %}
-  <p>No jobs found.</p>
+<p>No jobs found.</p>
 {% endif %}
 {% endblock %}

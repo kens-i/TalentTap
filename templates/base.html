@@ -9,7 +9,7 @@
 <nav>
   <a href="{% url 'job_list' %}">Home</a>
   {% if user.is_authenticated %}
-    <a href="{% url 'employer_dashboard' %}">Dashboard</a>
+    <a href="{% url 'create_job' %}">Post a Job</a>
     <a href="{% url 'account_logout' %}">Logout</a>
     <span>Welcome, {{ user.email|default:user.username }}</span>
   {% else %}
@@ -19,11 +19,11 @@
 </nav>
 
 {% if messages %}
-  <ul>
-    {% for message in messages %}
-      <li>{{ message }}</li>
-    {% endfor %}
-  </ul>
+<ul>
+  {% for message in messages %}
+    <li>{{ message }}</li>
+  {% endfor %}
+</ul>
 {% endif %}
 
 <main>
