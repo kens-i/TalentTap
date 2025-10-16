@@ -74,3 +74,31 @@ def job_detail(request, job_id):
         form = ContactForm()
     
     return render(request, 'job_detail.html', {'job': job, 'form': form})
+
+
+def edit_job(request, job_id):
+    job = get_object_or_404(Job, pk=job_id)
+    if not request.user.is_authenticated:
+        return HttpResponse('You must be logged in to edit a job.', status=403)
+    if job.owner != request.user:
+        return HttpResponse('You do not have permission to edit this job.', status=403)
+    if request.method == 'POST':
+        form = JobForm(request.POST, instance=job)
+        if form.is_valid():
+            form.save()
+            return redirect('job_detail', job_id=job.id)
+    else:
+        form = JobForm(instance=job)
+    return render(request, 'home/edit_job.html', {'form': form, 'job': job})
+
+
+def delete_job(request, job_id):
+    job = get_object_or_404(Job, pk=job_id)
+    if not request.user.is_authenticated:
+        return HttpResponse('You must be logged in to delete a job.', status=403)
+    if job.owner != request.user:
+        return HttpResponse('You do not have permission to delete this job.', status=403)
+    if request.method == 'POST':
+        job.delete()
+        return redirect('job_list')
+    return render(request, 'home/delete_job.html', {'job': job})
