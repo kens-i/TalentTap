@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Job Listings{% endblock %}
+{% block content %}
+<h1>Job Listings</h1>
+
+<form method="get">
+  <label>Search:</label>
+  <input type="text" name="q" value="{{ request.GET.q }}">
+  <label>Location:</label>
+  <input type="text" name="loc" value="{{ request.GET.loc }}">
+  <button type="submit">Filter</button>
+</form>
+
+{% if jobs %}
+  <ul>
+    {% for job in jobs %}
+      <li>
+        <a href="{% url 'job_detail' job.pk %}">{{ job.title }}</a>
+        — {{ job.company }} ({{ job.location }})
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No jobs found.</p>
+{% endif %}
+{% endblock %}
