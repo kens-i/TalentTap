@@ -2,12 +2,12 @@
 {% block title %}Delete Job{% endblock %}
 {% block content %}
 <h1>Delete Job</h1>
-<p>Are you sure you want to delete "{{ object.title }}"?</p>
+<p>Are you sure you want to delete "{{ job.title }}"?</p>
 
 <form method="post">
   {% csrf_token %}
   <button type="submit">Confirm Delete</button>
 </form>
 
-<p><a href="{% url 'employer_dashboard' %}">Cancel</a></p>
+<p><a href="{% url 'job_detail' job.id %}">Cancel</a></p>
 {% endblock %}
