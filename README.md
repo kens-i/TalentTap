@@ -234,7 +234,7 @@ The site was tested on two different browsers for compatibility: Safari & Chrome
 | Delete job — confirmation flow (`/jobs/<id>/delete/`) | GET shows confirm page; POST deletes and redirects to list | success | success |
 | Apply to a job — valid submission | Application form accepts valid data; success message shown (email sent via console backend) | fail | fail |
 | Apply to a job — invalid submission | Validation errors shown; no application saved | fail | fail |
-| Search jobs — keyword (`q`) & location (`loc`) | List filters to matching results | success | success |
+| Search jobs — keyword (`q`) & location (`loc`) | List filters to matching results | fail | fail |
 | Messages/flash notifications | Django messages appear after actions (create/edit/apply/delete) | success | success |
 | Form labels & errors | Labels present; invalid fields show error text | success | success |
 | Mobile viewport (responsive) | Layout adapts; nav stacks; content readable | success | success |
