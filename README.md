@@ -21,6 +21,7 @@ Include a screenshot or GIF showing the site on multiple screen sizes (desktop, 
 
 List of sections included in the README and the project (optional table of contents).
 
+
 ## UX (User Experience)
 
 - User stories
@@ -28,6 +29,27 @@ List of sections included in the README and the project (optional table of conte
 - Scope
 - Structural skeleton / wireframes
 - Surface (visual design decisions)
+
+### Wireframes
+
+Below are the wireframes for the main pages and features of TalentTap. These illustrate the layout and user flow for desktop and mobile views:
+
+**Job Listings (Desktop):**
+![Job Listings Desktop](wireframe-job-listings-desktop.png)
+
+**Job Listings (Mobile):**
+![Job Listings Mobile](wireframe-job-listings-mobile.png)
+
+**Login Page:**
+![Login Page](wireframe-login.png)
+
+**Register Page:**
+![Register Page](wireframe-register.png)
+
+**Post a Job:**
+![Post a Job](post-a-job.png)
+
+These images show the search/filter UI, job list, authentication forms, and job posting form for both desktop and mobile layouts.
 
 ## Design
 
