@@ -79,7 +79,30 @@ Step-by-step process used for deploying the project (e.g., Heroku, Vercel, Rende
 
 ## Testing
 
-Validation of HTML/CSS, Lighthouse audits, accessibility testing, unit/integration tests, and known bugs or limitations.
+Testing has been completed for HTML, CSS, and Python code validation. Lighthouse performance reports have also been generated for both desktop and mobile views.
+
+### Testing tools
+- [HTML Validator](https://validator.w3.org/nu/) - Used to validate the HTML files.
+- [CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS code.
+- [CI Python Linted](https://pep8ci.herokuapp.com/) - Used to validate Python code.
+- Chrome Developer Tools - Lighthouse reports, template responsiveness
+
+### HTML Validation
+![HTML Validator Results](static/images/readme/html_validator.jpeg)
+
+### CSS Validation
+![CSS Validator Results](static/images/readme/css_validator.jpeg)
+
+### Python Validation
+![Python Validator Results](static/images/readme/python_validator.jpeg)
+
+### Lighthouse Report - Desktop
+![Lighthouse Desktop Results](static/images/readme/lighthouse_desktop.jpeg)
+
+### Lighthouse Report - Mobile
+![Lighthouse Mobile Results](static/images/readme/lighthouse_mobile.jpeg)
+
+
 
 ## Credits
 
@@ -101,6 +124,3 @@ Proper attribution is important and helps other developers find referenced resou
 - Don't forget to validate all JavaScript and Python code.
 - Keep this README updated as the project evolves.
 
-
-
-GK - test 
