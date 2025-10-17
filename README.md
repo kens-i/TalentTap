@@ -74,7 +74,27 @@ We chose vibrant blues and yellows for the jobs board to reflect the energy and 
 
 ## Website Features
 
-Describe key features available in the website (authentication, search, forms, dashboards, etc.).
+## Website Features
+
+### User Authentication
+- Users can register and log in as employers using Django Allauth for secure authentication.
+- Session management ensures users remain logged in across pages.
+
+### Job Posting Management
+- **Create**: Authenticated employers can create job postings through a form that includes fields for title, company, location, description, and contact email.
+- **Edit**: Employers can edit their own job postings to update information as needed.
+- **Delete**: Employers can remove job postings they have created.
+
+### Job Listings
+- All users (including non-authenticated visitors) can view the complete list of job postings.
+- Each job listing displays key information and links to a detailed view.
+
+### Job Details
+- Users can click on any job listing to view full details including description, location, and contact information.
+
+### Access Control
+- Only authenticated employers can create, edit, or delete job postings.
+- Employers can only edit or delete their own job postings for security and data integrity.
 
 ## Tablet / Mobile View
 
