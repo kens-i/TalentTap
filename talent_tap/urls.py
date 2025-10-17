@@ -21,5 +21,8 @@ from home import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('jobs/', include('home.urls')),
+    path('jobs/', views.job_list, name='job_list'),
+    path('jobs/create/', views.create_job, name='create_job'),
+    path('jobs/<int:job_id>/', views.job_detail, name='job_details'),
+    path('accounts/', include('allauth.urls')),
 ]
