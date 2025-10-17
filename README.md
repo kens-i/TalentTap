@@ -6,9 +6,7 @@ Project Title — TalentTap
 
 ## Live Site
 
-Link to the live site:
-
-![](https://talent-tap-7cd41bcbdbab.herokuapp.com/jobs/)
+Link to the live site: https://talent-tap-7cd41bcbdbab.herokuapp.com/jobs/
 
 ## User Stories
 - (Must Have)) As an employer, I want to register and log in, so that I can manage my job ads securely.
