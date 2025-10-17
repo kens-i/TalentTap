@@ -2,23 +2,23 @@
 {% block title %}{{ job.title }}{% endblock %}
 {% block content %}
 
+
+<form method="post" action="{% url 'job_list' %}">
+  {% csrf_token %}
+  {{ apply_form.as_p }}
+<h1>Post Job Listing</h1>
+  <h2>{{ job.title }}</h2>
+<p><strong>Company:</strong> {{ job.company }}</p>
+<p><strong>Location:</strong> {{ job.location }}</p>
+<p><strong>Description:</strong></p>
+<p>{{ job.description }}</p>
+
 {% if user.is_authenticated and job.owner_id == user.id %}
   <p>
     <a href="{% url 'edit_job' job.id %}">Edit</a> |
     <a href="{% url 'delete_job' job.id %}">Delete</a>
   </p>
 {% endif %}
-
-<h2>Post Job Listing</h2>
-<form method="post" action="{% url 'job_list' %}">
-  {% csrf_token %}
-  {{ apply_form.as_p }}
-
-  <!-- <h1>{{ job.title }}</h1>
-<p><strong>Company:</strong> {{ job.company }}</p>
-<p><strong>Location:</strong> {{ job.location }}</p>
-<p><strong>Description:</strong></p>
-<p>{{ job.description }}</p> -->
 
   <button type="submit">Post Job Listing</button>
 </form>

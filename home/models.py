@@ -17,9 +17,9 @@ class Job(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def clean(self):
-        if self.owner_id and self.owner.role != "EMPLOYER":
-            raise ValidationError("Only employers can own jobs.")
+    # def clean(self):
+    #     if self.owner_id != "EMPLOYER":
+    #         raise ValidationError("Only employers can own jobs.")
 
     def __str__(self):
         return f"{self.title} @ {self.company}"
