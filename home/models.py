@@ -34,4 +34,3 @@ class Application(models.Model):
 
     def __str__(self):
         return f"Application for {self.job.title} by {self.applicant_name}"
-
