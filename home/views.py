@@ -15,10 +15,11 @@ def index(request):
 def job_list(request):
     if request.user.is_authenticated:
         jobs = Job.objects.all()
-        return render(request, 'job_list.html', {'jobs': jobs})
+        # Render the template placed under templates/jobs/job_list.html
+        return render(request, 'jobs/job_list.html', {'jobs': jobs})
     else:
         return HttpResponse('You must be logged in to view job listings.', status=403)
-
+        
 def job_detail(request, job_id):
     """
     Show job details and handle the contact/application form submission.
