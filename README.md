@@ -45,6 +45,28 @@ We selected Space Grotesk and Roboto Condensed for their clean, modern feel—ba
 
 #### Color Scheme
 
+### Wireframes
+
+Below are the wireframes for the main pages and features of TalentTap. These illustrate the layout and user flow for desktop and mobile views:
+
+**Job Listings (Desktop):**
+![Job Listings Desktop](wireframe-job-listings-desktop.png)
+
+**Job Listings (Mobile):**
+![Job Listings Mobile](wireframe-job-listings-mobile.png)
+
+**Login Page:**
+![Login Page](wireframe-login.png)
+
+**Register Page:**
+![Register Page](wireframe-register.png)
+
+**Post a Job:**
+![Post a Job](post-a-job.png)
+
+These images show the search/filter UI, job list, authentication forms, and job posting form for both desktop and mobile layouts.
+
+## Design
 We chose vibrant blues and yellows for the jobs board to reflect the energy and optimism of career growth, while tying seamlessly into the logo’s palette to reinforce brand identity and visual cohesion.
 
 ![Colour Scheme](static/images/color1.png)
