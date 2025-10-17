@@ -56,7 +56,7 @@ def job_detail(request, job_id):
     else:
         form = ContactForm()
 
-    return render(request, 'job_detail.html', {'job': job, 'form': form})
+    return render(request, 'jobs/job_detail.html', {'job': job, 'form': form})
 
 def create_job(request):
     if not request.user.is_authenticated:
