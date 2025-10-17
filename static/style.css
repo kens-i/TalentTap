@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    --primary-font: 'Space Grotesk', sans-serif;
+    --secondary-font: 'Roboto Condensed', sans-serif;
+    --primary-color: #100474;
+    --secondary-color: #005F70;
+    --highlight-color: #e2f4fd;
+    --highlight-color-bright: #ffdc5d;
+}
+
+/* global styles */
+
+h1, h2, h3 {
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+}
+
+a, p {
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+}
+
+nav {
+    display: flex;
+    background-color: var(--highlight-color);
+    height: 100px;
+}
+
+nav a {
+    display: flex;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-size: larger;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+nav a:hover{
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+    text-decoration: underline;
+    padding: 10px 15px;
+    display: inline-block;
+}

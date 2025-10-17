@@ -17,11 +17,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from home import views
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+
+    # Job routes
     path('jobs/', views.job_list, name='job_list'),
     path('jobs/create/', views.create_job, name='create_job'),
-    path('jobs/<int:job_id>/', views.job_detail, name='job_details'),
+    path('jobs/<int:job_id>/', views.job_detail, name='job_detail'),
+
+    # Redirect /login to allauth's account_login (this will render templates/account/login.html)
+    path('login/', RedirectView.as_view(pattern_name='account_login', permanent=False), name='login'),
+
+    # Mount django-allauth urls (provides account_login, account_signup, etc) at /accounts/
+    path('accounts/', include('allauth.urls')),
 ]
