@@ -35,7 +35,7 @@ TalentTap is a lightweight job board built to connect employers with candidates 
 
 ## ERD
 
-![ERD](static/images/img/erd.png)
+![ERD](static/img/erd.png)
 ---
 
 ## Design
