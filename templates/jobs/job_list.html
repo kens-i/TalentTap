@@ -2,7 +2,7 @@
 {% block title %}Job Listings{% endblock %}
 {% block content %}
 
-<form method="get">
+<form method="get" class="listings-form">
   <h1>Job Listings</h1>
   <label>Search:</label>
   <input type="text" name="q" value="{{ request.GET.q }}">
