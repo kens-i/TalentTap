@@ -11,7 +11,7 @@ Link to the live site:
 ![](https://talent-tap-7cd41bcbdbab.herokuapp.com/jobs/)
 
 ## User Stories
-- (- (Must Have)) As an employer, I want to register and log in, so that I can manage my job ads securely.
+- (Must Have)) As an employer, I want to register and log in, so that I can manage my job ads securely.
 - (Must Have)	As an employer, I want to create a new job ad, so that I can advertise an open position.
 - (Must Have)	As an employer, I want to edit or delete my job ads, so that I can keep my listings accurate.
 - (Must Have)	As a visitor, I want to view all available jobs, so that I can find roles that interest me.
