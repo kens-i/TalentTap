@@ -60,15 +60,6 @@ nav a:hover{
 
 /* form styles */
 
-:root {
-  --primary-font: 'Space Grotesk', sans-serif;
-  --secondary-font: 'Roboto Condensed', sans-serif;
-  --primary-color: #100474;
-  --secondary-color: #005F70;
-  --highlight-color: #e2f4fd;
-  --highlight-color-bright: #ffdc5d;
-}
-
 form {
   max-width: 400px;
   margin: 50px auto;
@@ -125,6 +116,12 @@ p a:hover {
   text-decoration: underline;
 }
 
+
+/* job list styles */
+
+.listings-form:submit {
+  margin-top: 30px;
+}
 
 @media (max-width: 600px) {
   nav {

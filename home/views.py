@@ -71,7 +71,7 @@ def create_job(request):
             return HttpResponse('Job created successfully!')
     else:
         form = JobForm()
-    return render(request, 'home/create_job.html', {'form': form})
+    return render(request, 'jobs/job_detail.html', {'form': form})
 
 def edit_job(request, job_id):
     job = get_object_or_404(Job, pk=job_id)
