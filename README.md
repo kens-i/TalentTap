@@ -72,9 +72,22 @@ We chose vibrant blues and yellows for the jobs board to reflect the energy and 
 ![Colour Scheme](static/images/color1.png)
 ![Colour Scheme](static/images/color2.png)
 
+
 ## Website Features
 
-Describe key features available in the website (authentication, search, forms, dashboards, etc.).
+TalentTap offers the following key features:
+
+- **User Authentication:** Secure registration, login, and logout for employers. Only authenticated users can post, edit, or delete job listings.
+- **Job Management:** Employers can create, edit, and delete job ads. Each job ad includes title, company, location, description, and contact email.
+- **Job Listings:** All users can browse a list of available jobs, view full job details, and see job status (open/closed).
+- **Search & Filter:** Visitors can search and filter jobs by keyword and location to quickly find relevant roles.
+- **Application Form:** Visitors can apply for jobs using a built-in contact form, which sends their application to the employer's contact email.
+- **Employer Dashboard:** Employers can view and manage their posted jobs from a simple dashboard (should-have feature).
+- **Notifications:** Employers receive notifications or emails when someone applies for their job listing (should-have feature).
+- **Mobile-Responsive Design:** The site adapts to desktop, tablet, and mobile screens for a seamless user experience.
+- **Accessibility:** Semantic HTML and form validation ensure the site is usable for all visitors.
+
+These features make TalentTap a practical, user-friendly job board for both employers and job seekers.
 
 ## Tablet / Mobile View
 
@@ -126,9 +139,14 @@ Testing has been completed for HTML, CSS, and Python code validation. Lighthouse
 
 
 
+
 ## Credits
 
 Content references, media sources and acknowledgements.
+
+### Thank You
+
+Special thanks to Code Institute for their excellent curriculum, guidance, and support throughout this project. Heartfelt appreciation to all team members for their collaboration, dedication, and hard work. Your creativity, feedback, and teamwork made TalentTap possible!
 
 ### Attribution / Credit Requirements
 
