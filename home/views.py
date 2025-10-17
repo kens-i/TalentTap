@@ -56,7 +56,7 @@ def job_detail(request, job_id):
     else:
         form = ContactForm()
 
-    return render(request, 'job_detail.html', {'job': job, 'form': form})
+    return render(request, 'jobs/job_detail.html', {'job': job, 'form': form})
 
 def create_job(request):
     if not request.user.is_authenticated:
@@ -68,10 +68,10 @@ def create_job(request):
             job.owner = request.user
             job.status = 'OPEN'
             job.save()
-            return HttpResponse('Job created successfully!')
+            return redirect('job_detail', job_id=job.id)
     else:
         form = JobForm()
-    return render(request, 'home/create_job.html', {'form': form})
+    return render(request, 'jobs/job_form.html', {'form': form})
 
 def edit_job(request, job_id):
     job = get_object_or_404(Job, pk=job_id)
@@ -86,7 +86,7 @@ def edit_job(request, job_id):
             return redirect('job_detail', job_id=job.id)
     else:
         form = JobForm(instance=job)
-    return render(request, 'home/edit_job.html', {'form': form, 'job': job})
+    return render(request, 'jobs/job_form.html', {'form': form, 'job': job})
 
 def delete_job(request, job_id):
     job = get_object_or_404(Job, pk=job_id)
@@ -97,4 +97,4 @@ def delete_job(request, job_id):
     if request.method == 'POST':
         job.delete()
         return redirect('job_list')
-    return render(request, 'home/delete_job.html', {'job': job})
+    return render(request, 'jobs/job_confirmation_delete.html', {'job': job})
