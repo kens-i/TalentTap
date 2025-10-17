@@ -119,7 +119,7 @@ p a:hover {
 
 /* job list styles */
 
-.listings-form button[type="submit"] {
+.listings-form:submit {
   margin-top: 30px;
 }
 

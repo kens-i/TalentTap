@@ -8,14 +8,17 @@ from .forms import JobForm, ContactForm
 
 # Create your views here.
 
+
 def index(request):
     # Redirect to the named job_list URL (keeps the job_list view's auth checks)
     return redirect('job_list')
 
+
 def job_list(request):
-        jobs = Job.objects.all()
-        return render(request, 'jobs/job_list.html', {'jobs': jobs})
-        
+    jobs = Job.objects.all()
+    return render(request, 'jobs/job_list.html', {'jobs': jobs})
+
+
 def job_detail(request, job_id):
     """
     Show job details and handle the contact/application form submission.
@@ -58,6 +61,7 @@ def job_detail(request, job_id):
 
     return render(request, 'jobs/job_detail.html', {'job': job, 'form': form})
 
+
 def create_job(request):
     if not request.user.is_authenticated:
         return HttpResponse('You must be logged in to create a job.', status=403)
@@ -73,6 +77,7 @@ def create_job(request):
         form = JobForm()
     return render(request, 'jobs/job_form.html', {'form': form})
 
+
 def edit_job(request, job_id):
     job = get_object_or_404(Job, pk=job_id)
     if not request.user.is_authenticated:
@@ -87,6 +92,7 @@ def edit_job(request, job_id):
     else:
         form = JobForm(instance=job)
     return render(request, 'jobs/job_form.html', {'form': form, 'job': job})
+
 
 def delete_job(request, job_id):
     job = get_object_or_404(Job, pk=job_id)
