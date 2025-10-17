@@ -242,8 +242,6 @@ The site was tested on two different browsers for compatibility: Safari & Chrome
 | Mobile viewport (responsive) | Layout adapts; nav stacks; content readable | success | success |
 | Desktop viewport (responsive) | Layout displays correctly at common widths | success | success |
 
-Validation of HTML/CSS, Lighthouse audits, accessibility testing, unit/integration tests, and known bugs or limitations.
-
 ## Debugging
 
 From the testing carried out above, a bug was noted.
