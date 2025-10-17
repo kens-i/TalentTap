@@ -35,19 +35,20 @@ Link to the live site:
 ## Brief Introduction
 TalentTap is a lightweight job board built to connect employers with candidates quickly and accessibly. Employers can create, edit and manage job listings from a simple dashboard, while visitors can browse, filter and view full job details, contact employers via a built-in form, and apply where a contact method is provided. The project focuses on clean, mobile-responsive pages, semantic HTML for accessibility, and a small, testable Django backend to handle job posting, form submissions and notification emails.
 
-## UX (User Experience)
-
-- User stories
-- Strategy
-- Scope
-- Structural skeleton / wireframes
-- Surface (visual design decisions)
-
 ## Design
 
-- Typography
-- Colour scheme
-- Imagery and iconography
+### Typography
+
+We selected Space Grotesk and Roboto Condensed for their clean, modern feel—balancing personality with readability across the jobs board—while echoing the geometric precision and friendly tone of the logo for a cohesive brand experience.
+
+![fonts](static/images/font.png)
+
+#### Color Scheme
+
+We chose vibrant blues and yellows for the jobs board to reflect the energy and optimism of career growth, while tying seamlessly into the logo’s palette to reinforce brand identity and visual cohesion.
+
+![Colour Scheme](static/images/color1.png)
+![Colour Scheme](static/images/color2.png)
 
 ## Website Features
 
